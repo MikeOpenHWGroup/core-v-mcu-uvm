@@ -1,4 +1,4 @@
-// Copyright 2022-2023 Datum Technology Corporation
+// Copyright 2023 Datum Technology Corporation
 // All rights reserved
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -44,7 +44,7 @@ class uvme_cvmcu_uart_tx_cfg_reg_c extends uvmx_reg_c;
          .size                   (   1),
          .lsb_pos                (   6),
          .access                 ("WO"),
-         .volatile               (   0),
+         .volatile               (   1),
          .reset                  (   0),
          .has_reset              (   1),
          .is_rand                (   1),
@@ -56,7 +56,7 @@ class uvme_cvmcu_uart_tx_cfg_reg_c extends uvmx_reg_c;
          .size                   (   1),
          .lsb_pos                (   5),
          .access                 ("RO"),
-         .volatile               (   0),
+         .volatile               (   1),
          .reset                  (   0),
          .has_reset              (   1),
          .is_rand                (   1),
@@ -68,7 +68,7 @@ class uvme_cvmcu_uart_tx_cfg_reg_c extends uvmx_reg_c;
          .size                   (   1),
          .lsb_pos                (   4),
          .access                 ("RW"),
-         .volatile               (   0),
+         .volatile               (   1),
          .reset                  (   0),
          .has_reset              (   1),
          .is_rand                (   1),
@@ -80,7 +80,7 @@ class uvme_cvmcu_uart_tx_cfg_reg_c extends uvmx_reg_c;
          .size                   (   1),
          .lsb_pos                (   0),
          .access                 ("RW"),
-         .volatile               (   0),
+         .volatile               (   1),
          .reset                  (   0),
          .has_reset              (   1),
          .is_rand                (   1),

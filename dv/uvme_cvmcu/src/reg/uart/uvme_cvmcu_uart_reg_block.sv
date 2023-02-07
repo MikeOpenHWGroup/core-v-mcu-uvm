@@ -1,4 +1,4 @@
-// Copyright 2022-2023 Datum Technology Corporation
+// Copyright 2023 Datum Technology Corporation
 // All rights reserved
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -119,7 +119,7 @@ class uvme_cvmcu_uart_reg_block_c extends uvmx_reg_block_c;
       // Create default register map (default_map)
       default_map = create_map(
          .name     ("default_map"),
-         .base_addr(32'h1a10_2000),
+         .base_addr(32'h0000_0000),
          .n_bytes  (4),
          .endian   (UVM_LITTLE_ENDIAN)
       );

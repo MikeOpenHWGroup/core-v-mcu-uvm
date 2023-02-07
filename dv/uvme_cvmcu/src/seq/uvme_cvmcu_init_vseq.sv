@@ -62,9 +62,24 @@ class uvme_cvmcu_init_vseq_c extends uvme_cvmcu_base_vseq_c;
       //          if (value == 4'b1010) begin
       //             // ...
       //          end
-   endtask
 
-endtask : body
+      // Turn on all uDMA peripheral clocks
+      uvma_obi_seq_item_c  req;
+
+      // Write
+      `uvm_do_on_with(req, p_sequencer.obi_data_vsequencer, {
+         access_type == UVMA_OBI_ACCESS_WRITE;
+         address     == 32'h1A10_2000;
+         data        == 32'hFFFF_FFFF;
+      })
+      // Read
+      `uvm_do_on_with(req, p_sequencer.obi_data_vsequencer, {
+         access_type == UVMA_OBI_ACCESS_READ;
+         address     == 32'h1A10_2000;
+      })
+      `uvm_info("INIT_VSEQ", $sformatf("Data read back from location 'x%h is x%h", req.address, req.data), UVM_NONE)
+
+   endtask : body
 
 endclass : uvme_cvmcu_init_vseq_c
 

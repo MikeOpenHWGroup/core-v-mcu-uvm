@@ -156,6 +156,13 @@ class uvme_cvmcu_env_c extends uvmx_env_c #(
     *
     */
    virtual function void add_reg_test_ignore_lists();
+      // All of the uvme_cvmcu_reg_*_ignore_lists are queues of strings.
+      // In a perfect world, all of these ignore_lists will be empty.
+      if (uvme_cvmcu_reg_bit_bash_ignore_list.size() > 0) begin
+         `uvm_warning("CVMCU_ENV", "UVME CVMCU REG BIT BASH IGNORE LIST is not null")
+         `fooU2("whatevr")
+      end
+
       add_reg_test_ignore_list(UVM_DO_ALL_REG_MEM_TESTS, uvme_cvmcu_all_reg_mem_ignore_list    );
       add_reg_test_ignore_list(UVM_DO_REG_HW_RESET     , uvme_cvmcu_reg_hw_reset_ignore_list   );
       add_reg_test_ignore_list(UVM_DO_REG_BIT_BASH     , uvme_cvmcu_reg_bit_bash_ignore_list   );

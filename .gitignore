@@ -3,3 +3,5 @@
 .mdc_empty_dir_sync
 .mdc/sync
 .mdc/workspace
+*.swp
+ip.lock.yml

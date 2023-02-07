@@ -20,8 +20,26 @@ string  uvme_cvmcu_reg_hw_reset_ignore_list[$] = '{
 };
 
 string  uvme_cvmcu_reg_bit_bash_ignore_list[$] = '{
-   "apb_timer.cfg_reg_hi" ,
-   "apb_timer.cfg_reg_low"
+   "apb_timer.cfg_reg_hi",
+   "apb_timer.cfg_reg_low",
+
+//   "gpio.intack",
+   "gpio.rdstat"//,
+/*
+   "uart0.tx_cfg",   // Volatile: RW behavior is dependent on state of PENDING (bit 5)
+   "uart0.tx_size",  // Volatile: size of receive buffer on write; bytes left on read
+   "uart0.tx_saddr", // Volatile: address of Tx buffer on write; current address on read
+   "uart0.rx_cfg",   // Volatile: see tx
+   "uart0.rx_size",  // Volatile: see tx
+   "uart0.rx_saddr", // Volatile: see tx
+
+   "uart1.tx_cfg",
+   "uart1.tx_size",
+   "uart1.tx_saddr",
+   "uart1.rx_cfg",
+   "uart1.rx_size",
+   "uart1.rx_saddr"
+*/
 };
 
 string  uvme_cvmcu_reg_access_ignore_list[$] = '{

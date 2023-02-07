@@ -1,4 +1,4 @@
-// Copyright 2022-2023 Datum Technology Corporation
+// Copyright 2023 Datum Technology Corporation
 // All rights reserved
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -38,7 +38,7 @@ class uvme_cvmcu_uart_rx_size_reg_c extends uvmx_reg_c;
          .size                   (   16),
          .lsb_pos                (   0),
          .access                 ("RW"),
-         .volatile               (   0),
+         .volatile               (   1),
          .reset                  (   0),
          .has_reset              (   1),
          .is_rand                (   1),
