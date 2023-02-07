@@ -8,7 +8,7 @@
 
 
 /**
- * Component on which all CORE-V MCU Sub-System environment (uvme_cvmcu_env_c) virtual sequences are run.
+ * Component on which all CORE-V MCU environment (uvme_cvmcu_env_c) virtual sequences are run.
  * @ingroup uvme_cvmcu_comps
  */
 class uvme_cvmcu_vsqr_c extends uvmx_env_vsqr_c #(
@@ -18,8 +18,8 @@ class uvme_cvmcu_vsqr_c extends uvmx_env_vsqr_c #(
 
    /// @name Sequencer handles
    /// @{
-   uvma_obi_vsqr_c  obi_instr_vsequencer; ///< Register access agent sequencer
-   uvma_obi_vsqr_c  obi_data_vsequencer ; ///< Register access agent sequencer
+   uvma_obi_vsqr_c  obi_instr_vsequencer; ///< Instruction access agent sequencer
+   uvma_obi_vsqr_c  obi_data_vsequencer ; ///< Data access agent sequencer
    // TODO: Add sequencer handles
    //       Ex: uvme_sub_vsqr_c  sub_vsequencer; ///< Describe me!
    /// @}
